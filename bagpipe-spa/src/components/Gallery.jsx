@@ -1,14 +1,58 @@
+// src/components/Gallery.jsx
+import React, { useState } from "react";
+import Modal from "./Modal";
+import { images } from "../assets/images/galleryImages";
 
-import image1 from '../assets/images/IMG_20250409_212824_9.jpg'
-import image2 from '../assets/images/IMG_20250409_213053_6.jpg'
-import image3 from '../assets/images/IMG_20250409_213127_3.jpg'
-import image4 from '../assets/images/IMG_20250409_213253_4.jpg'
-import image5 from '../assets/images/IMG_20250409_213324_1.jpg'
+const Gallery = ({ title }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [showGalleryModal, setShowGalleryModal] = useState(false);
 
-const images = [
-  { id: 1, src: image1, alt: 'Волынка 1' },
-  { id: 2, src: image2, alt: 'Волынка 2' },
-  { id: 3, src: image3, alt: 'Волынка 3' },
-  { id: 4, src: image4, alt: 'Волынка 4' },
-  { id: 5, src: image5, alt: 'Волынка 5' }
-]
+  const openImage = (index) => {
+    setCurrentImageIndex(index);
+    setShowGalleryModal(true);
+  };
+
+  const showPrevImage = () => {
+    setCurrentImageIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
+  };
+
+  const showNextImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  return (
+    <div className="gallery">
+      {title && <div className="gallery-title">{title}</div>}
+      <div className="gallery-grid">
+        {images.map((image, index) => (
+          <div
+            key={image.id}
+            className="gallery-item"
+            onClick={() => openImage(index)}
+          >
+            <img src={image.src} alt={image.alt} className="gallery-img" />
+          </div>
+        ))}
+      </div>
+
+      <Modal show={showGalleryModal} onClose={() => setShowGalleryModal(false)}>
+        <div className="image-container">
+          <img
+            src={images[currentImageIndex].src}
+            alt={images[currentImageIndex].alt}
+          />
+        </div>
+        <button className="gallery-nav prev" onClick={showPrevImage}>
+          &#10094;
+        </button>
+        <button className="gallery-nav next" onClick={showNextImage}>
+          &#10095;
+        </button>
+      </Modal>
+    </div>
+  );
+};
+
+export default Gallery;

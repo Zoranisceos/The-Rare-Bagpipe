@@ -1,8 +1,10 @@
+// src/App.jsx
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import GalleryPage from "./pages/GalleryPage";
 import About from "./pages/About";
+import BagpipePage from "./pages/BagpipePage";
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="gallery" element={<GalleryPage />} />
         <Route path="about" element={<About />} />
+        <Route path="bagpipe" element={<BagpipePage />} />
       </Route>
     </Routes>
   );
