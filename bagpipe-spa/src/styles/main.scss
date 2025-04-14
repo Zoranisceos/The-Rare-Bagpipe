@@ -1,5 +1,6 @@
 // src/styles/main.scss
-@use "./variables" as *; // Вместо @import
+@use "sass:color"; // Добавляем импорт модуля color
+@use "./variables" as *; // Используем переменные
 
 /* Базовые стили */
 body {
@@ -32,10 +33,7 @@ body {
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: color.adjust(
-        $primary-color,
-        $lightness: -10%
-      ); // Вместо darken()
+      background-color: color.adjust($primary-color, $lightness: -10%);
     }
   }
 }
