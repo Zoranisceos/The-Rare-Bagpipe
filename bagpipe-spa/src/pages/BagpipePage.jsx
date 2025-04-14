@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Modal from "../components/Modal";
 import Gallery from "../components/Gallery";
-import bagpipeImage from "../assets/images/IMG_20250409_212925_4.jpg";
+import bagpipeImage from "/bagpipe-spa/src/assets/images/IMG_20250409_212925_4.jpg";
 import "../styles/bagpipe.scss";
 
 const BagpipePage = () => {
