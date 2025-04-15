@@ -10,6 +10,10 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  background-size: cover; /* Растягивает изображение на весь экран */
+  background-position: center; /* Центрирует изображение */
+  background-repeat: no-repeat; /* Отключает повторение */
+  background-attachment: fixed; /* Фиксирует фон при скролле (опционально) */
 }
 
 .container {
@@ -43,7 +47,7 @@ body {
 .parchment {
   background-color: #f0e6cc;
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   margin: 20px 0;
   border: 1px solid #d2b48c;
