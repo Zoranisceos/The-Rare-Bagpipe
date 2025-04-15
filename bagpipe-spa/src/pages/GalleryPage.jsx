@@ -4,7 +4,7 @@ import Gallery from "../components/Gallery";
 const GalleryPage = () => {
   return (
     <div className="parchment">
-      <h1>Галерея музыкальных инструментов</h1>
+      <h1>Галерея Uilleann Hummelchen Recorder</h1>
       <p>
         В данной галерее представлены фотографии редчайшей самобытной волынки.
       </p>
