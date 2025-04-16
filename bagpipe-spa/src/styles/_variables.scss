@@ -1,24 +1,31 @@
-// Цвета
+// Colors
 $primary-color: #8b4513;
 $secondary-color: #d2b48c;
 $background-color: #f0e6cc;
 $text-color: #3a2810;
+$parchment-bg: #f0e6cc;
+$white: #ffffff;
 
-// Шрифты
+// Fonts
 $font-main: "Uncial Antiqua", cursive;
 $font-secondary: Arial, sans-serif;
 
-// Отступы
+// Spacing
 $padding-small: 10px;
 $padding-medium: 20px;
 $padding-large: 30px;
 
-// Тени
+// Shadows
 $shadow-small: 0 2px 5px rgba(0, 0, 0, 0.1);
 $shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.2);
 $shadow-large: 0 8px 16px rgba(0, 0, 0, 0.3);
 
-// Анимации
+// Transitions
 $transition-fast: 0.2s;
 $transition-medium: 0.3s;
 $transition-slow: 0.5s;
+
+// Sizes
+$border-radius-small: 5px;
+$border-radius-medium: 10px;
+$border-radius-large: 20px;
