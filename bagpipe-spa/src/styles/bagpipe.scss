@@ -26,7 +26,7 @@
   }
 
   &-parchment {
-    @extend .parchment;
+    @extend .parchment !optional;
     max-width: 800px;
 
     .initial {
