@@ -37,7 +37,7 @@ body {
     color: $white;
     text-decoration: none;
     font-size: 1.125rem;
-    padding: $padding-small/2 $padding-small;
+    padding: calc($padding-small / 2) $padding-small;
     border-radius: $border-radius-small;
     transition: background-color $transition-fast;
 
@@ -175,7 +175,7 @@ body {
   z-index: 10;
 
   button {
-    padding: $padding-small/2 $padding-small;
+    padding: calc($padding-small / 2) $padding-small;
     background: rgba($primary-color, 0.8);
     color: $white;
     border: none;
