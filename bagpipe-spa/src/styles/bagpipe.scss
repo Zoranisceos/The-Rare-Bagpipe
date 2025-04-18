@@ -1,41 +1,58 @@
 @use "variables" as *;
 
-.bagpipe {
-  &-container {
-    text-align: center;
-    margin: 0 auto; // Центровка
-    overflow: hidden;
-    cursor: pointer;
+p {
+  text-align: center;
+  font-style: italic;
+  margin-top: 1rem;
+}
 
-    &-img {
-      width: 200px;
-      transition: transform $transition-medium;
-      border: 8px solid transparent;
-      box-shadow: $shadow-medium;
-      border-radius: $border-radius-medium;
+.initial {
+  font-size: 2rem;
+  float: left;
+  line-height: 1;
+  margin-right: 5px;
+  color: $primary-color;
+}
 
-      &:hover {
-        transform: scale(1.05);
-      }
-    }
+.bagpipe-container {
+  text-align: center;
+  margin: 0 auto;
+  overflow: visible; // Меняем на visible вместо hidden
+  cursor: pointer;
+  max-width: 100%; // Добавляем ограничение по ширине
+}
 
-    p {
-      text-align: center;
-      font-style: italic;
-      margin-top: 1rem;
+.parchment {
+  @extend .parchment !optional;
+  max-width: 800px;
+  margin: 0 auto; // Центрируем parchment-контейнер
+
+  .bagpipe-img {
+    width: 100%; // Меняем фиксированную ширину на относительную
+    max-width: 300px; // Добавляем максимальную ширину
+    transition: transform $transition-medium;
+    border: 8px solid transparent;
+    box-shadow: $shadow-medium;
+    border-radius: $border-radius-medium;
+    display: block; // Делаем изображение блочным
+    margin: 0 auto; // Центрируем изображение
+
+    &:hover {
+      transform: scale(0.9) rotate(5deg);
     }
   }
+}
 
-  &-parchment {
-    @extend .parchment !optional;
-    max-width: 800px;
-
-    .initial {
-      font-size: 2rem;
-      float: left;
-      line-height: 1;
-      margin-right: 5px;
-      color: $primary-color;
+// Добавляем медиа-запрос для мобильных устройств
+@media (max-width: 768px) {
+  .parchment {
+    .bagpipe-img {
+      max-width: 80%; // Уменьшаем максимальную ширину для мобильных
+      transform-origin: center; // Фиксируем точку трансформации
+      
+      &:hover {
+        transform: scale(0.95) rotate(3deg); // Уменьшаем эффект для мобильных
+      }
     }
   }
 }
