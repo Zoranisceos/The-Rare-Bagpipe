@@ -35,7 +35,6 @@ const BagpipePage = () => {
           src={bagpipeImage}
           alt="Редчайшая волынка"
           className="bagpipe-img"
-          style={{ maxWidth: "300px" }} // Добавляем инлайновый стиль
         />
         <p>Кликните на изображение волынки, чтобы посмотреть видео.</p>
       </div>
