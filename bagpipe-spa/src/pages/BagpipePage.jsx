@@ -61,14 +61,14 @@ const BagpipePage = () => {
 
       <Modal show={showVideoModal} onClose={() => setShowVideoModal(false)}>
         <div className="video-container">
-          <embed
+          <iframe
             width="560"
             height="315"
             src={videoUrl}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
             allowFullScreen
             title="Видео о волынке"
-          ></embed>
+          ></iframe>
         </div>
       </Modal>
     </div>

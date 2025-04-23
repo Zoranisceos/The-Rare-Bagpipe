@@ -90,7 +90,7 @@ p {
 .gallery {
   &-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
     gap: $padding-medium - 5;
     margin-top: $padding-medium;
   }
@@ -206,7 +206,7 @@ p {
   overflow: hidden; /* Скрываем выходящие за границы части */
 }
 /* Само видео */
-.video-container embed {
+.video-container iframe {
   position: relative;
   top: 0;
   left: 0;
@@ -214,11 +214,12 @@ p {
   max-height: 100%;
   border: none;
   border-radius: 10px;
+  display: block;
 }
 /* Responsive */
 @media (max-width: 768px) {
   .gallery-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
   }
 
   .navbar {
